@@ -1,0 +1,69 @@
+'   -private  #protected  ~package    +public
+'   <|-- Extension  *-- Composition o-- Aggregation
+
+@startuml CardGame
+
+skinparam style strictuml
+skinparam ClassAttributeIconSize 0
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 16
+skinparam DefaultFontStyle bold
+skinparam ArrowThickness 2
+skinparam ArrowColor #gray
+hide empty members
+
+
+class GameManager
+{
+    -deck : Deck
+    -players : List<Player>
+}
+GameManager "1" *-- "2" Player : is played by >
+GameManager "1" *-- "1" Deck : has >
+GameManager "5" *-- "1" Player : deals cards >
+GameManager "1" *-- "1" ColorScore : implements >
+
+
+abstract class Ruleset
+{
+    -decksize   : static final int
+    -handsize   : static final int
+    -minplayers : static final int
+    -maxplayers : static final int
+    +bool oneBeatsTwo(Player one, Player two)
+}
+
+
+class ColorScore
+{
+    -decksize: 52
+    -handsize: 5
+    -minplayers: 2
+    -maxplayers: 10
+    +bool oneBeatsTwo(Player one, Player two)
+}
+ColorScore "1" --* "1" Ruleset : is >
+
+
+class Deck
+{
+    -cards : final List<Card>
+}
+Deck "1" *-- "52" Card : contains >
+
+
+class Card
+{
+    -suit : final char
+    -value : final int
+}
+
+
+class Player
+{
+    -name : final string
+    -hand : List<Card>
+}
+
+
+@enduml
