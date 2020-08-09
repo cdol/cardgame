@@ -35,12 +35,14 @@ Die Spieleranzahl kann durch hinzufügen weiterer Spieler auf bis zu 10 erweiter
 Das Kartendeck lässt sich durch Aufruf des Deck-Constructor mit verändertem Parameter schnell auf zB 32 Karten (Skat) reduzieren.
 
 Sollen andere Spielregeln integriert werden, so kann ein weiteres Regelwerk implementiert werden, welches die Größe des Decks und der Spielerhand, 
-sowie minimale und maximale Spieleranzahl definiert. Außerdem muss dort die Methode 'bool oneBeatsTwo(Player one, Player two)' zur Auswertung des 
+sowie minimale und maximale Spieleranzahl definiert. Außerdem muss dort die Methode 'int[] score(Player)' zur Auswertung des 
 Spielergebnisses geschrieben werden.
 
 In der aktuellen Implementation sind nur Spielmodi vorgesehen, in der einmalig pro Spielrunde die Handkarten jedes Spielers gezogen werden.
 
+Außerdem wurden die Grundsteine für viele Funktionen gelegt, welche noch implementiert wird die maximale Spieleranzahl noch nicht überprüft.
 
+Desweiteren sind wahrscheinlich try/catch Blöcke zumindest um Dinge wie User Input sinnvoll.
 
 
 **Vielen Dank für diese Aufgabe, ich freue mich auf Ihr Feedback!**
