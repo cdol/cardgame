@@ -1,7 +1,7 @@
 # Quelldateien & Ausführung
 
 `	Die kompilierten Quelldateien sind abrufbar unter:
-**	url
+**	https://github.com/cdol/cardgame
 
 
 `	Das Program kann in der Eingabeaufforderung durch: 
