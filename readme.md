@@ -1,12 +1,14 @@
 # Quelldateien & Ausführung
 
-`	Die kompilierten Quelldateien sind abrufbar unter:
+`	Die Quelldateien sind abrufbar unter:
 **	https://github.com/cdol/cardgame
 
 
 `	Das Program kann in der Eingabeaufforderung durch: 
+**  'mvn compile'
 **	'java -cp target/classes GameManager'
-`	ausgeführt werden. Dazu muss vorher im Terminal/Eingabeaufforderung in den 'cardgame' Ordner navigiert werden.
+`	ausgeführt werden. Dazu muss vorher im Terminal/Eingabeaufforderung in den 'cardgame' Ordner navigiert werden,
+`   sowie eine gültige Maven Version eingerichtet sein.
 
 
 `	Ein einfaches UML-Diagramm finden Sie unter:
