@@ -30,7 +30,7 @@ abstract class Ruleset
     -handsize   : static final int
     -minplayers : static final int
     -maxplayers : static final int
-    +bool oneBeatsTwo(Player one, Player two)
+    +int[] score(Player)
 }
 
 
@@ -40,7 +40,7 @@ class ColorScore
     -handsize: 5
     -minplayers: 2
     -maxplayers: 10
-    +bool oneBeatsTwo(Player one, Player two)
+    +int[] score(Player)
 }
 ColorScore "1" --* "1" Ruleset : is >
 
